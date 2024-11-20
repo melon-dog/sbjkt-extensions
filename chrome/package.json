@@ -1,0 +1,32 @@
+{
+  "name": "sbjkt-extension",
+  "version": "0.0.1",
+  "main": "dist/sbjkt-extension.js",
+  "types": "dist/sbjkt-extension.d.ts",
+  "scripts": {
+    "build": "tsc"
+  },
+  "keywords": [
+    "sbjkt",
+    "extension",
+    "tezos",
+    "nft"
+  ],
+  "author": "melon-dog",
+  "license": "MIT",
+  "files": [
+    "dist",
+    "src"
+  ],
+  "devDependencies": {
+    "ts-node": "^10.9.2",
+    "typescript": "^5.6.3",
+    "vitest": "^2.1.5"
+  },
+  "description": "Sbjkt Extensions",
+  "homepage": "https://github.com/melon-dog/sbjkt-extensions/blob/main/README.md",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/melon-dog/sbjkt-extensions"
+  }
+}

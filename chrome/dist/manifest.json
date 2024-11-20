@@ -1,0 +1,25 @@
+{
+  "manifest_version": 3,
+  "name": "sbjkt",
+  "version": "0.0.1",
+  "description": "Sbjkt Extension",
+  "icons": {
+    "16": "sbjkt.png",
+    "48": "sbjkt.png",
+    "128": "sbjkt.png"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://twitter.com/*",
+        "https://x.com/*"
+      ],
+      "js": [
+        "sbjkt-extension.js"
+      ]
+    }
+  ],
+  "permissions": [
+    "activeTab"
+  ]
+}
