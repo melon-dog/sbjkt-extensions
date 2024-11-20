@@ -8,8 +8,8 @@ const sbjktIcon = `
 </svg>
 `;
 function addSbjktButton() {
-    const likeButtons = document.querySelectorAll('[data-testid="bookmark"]');
-    likeButtons.forEach(bookmarkButton => {
+    const bookmarkButtons = document.querySelectorAll('[data-testid="bookmark"]');
+    bookmarkButtons.forEach(bookmarkButton => {
         if ((bookmarkButton === null || bookmarkButton === void 0 ? void 0 : bookmarkButton.parentElement) === null) {
             return;
         }

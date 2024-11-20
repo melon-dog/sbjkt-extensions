@@ -8,9 +8,9 @@ const sbjktIcon = `
 `;
 
 function addSbjktButton() {
-    const likeButtons = document.querySelectorAll('[data-testid="bookmark"]');
+    const bookmarkButtons = document.querySelectorAll('[data-testid="bookmark"]');
 
-    likeButtons.forEach(bookmarkButton => {
+    bookmarkButtons.forEach(bookmarkButton => {
         if (bookmarkButton?.parentElement === null) { return; }
         if (bookmarkButton.parentElement.querySelector('.sbjkt-button')) { return; } //Already added.
 
