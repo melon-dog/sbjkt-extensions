@@ -1,5 +1,5 @@
 const sbjktIcon = `
-<svg viewBox="0 0 248 248" fill="none" xmlns="http://www.w3.org/2000/svg">
+<svg viewBox="0 0 248 248" fill="none" xmlns="http://www.w3.org/2000/svg" style="margin:auto;">
     <rect width="248" height="248" rx="124" fill="#8C89FF"/>
     <path fill-rule="evenodd" clip-rule="evenodd" d="M103.16 132.89C103.16 132.89 103.159 132.89 103.159 132.89C91.5818 144.468 91.5818 163.239 103.159 174.816C114.737 186.394 133.508 186.394 145.085 174.816C156.663 163.239 156.663 144.468 145.085 132.89C145.085 132.89 145.085 132.89 145.085 132.89L132.994 144.981C128.094 149.881 120.15 149.881 115.251 144.981L103.16 132.89Z" fill="#121212"/>
     <path fill-rule="evenodd" clip-rule="evenodd" d="M186.118 133.052C186.173 132.998 186.227 132.944 186.282 132.889C197.859 121.312 197.859 102.541 186.282 90.963C174.704 79.3855 155.933 79.3855 144.356 90.9631C132.778 102.541 132.778 121.312 144.356 132.889C144.4 132.933 144.444 132.977 144.488 133.02L144.356 132.888L156.447 120.796C161.347 115.897 169.29 115.897 174.19 120.796L186.282 132.888L186.118 133.052Z" fill="#121212"/>
@@ -8,11 +8,11 @@ const sbjktIcon = `
 `;
 
 function addSbjktButton() {
-    const likeButtons = document.querySelectorAll('[data-testid="like"], [data-testid="unlike"]');
+    const likeButtons = document.querySelectorAll('[data-testid="bookmark"]');
 
-    likeButtons.forEach(likeButton => {
-        if (likeButton?.parentElement === null) { return; }
-        if (likeButton.parentElement.querySelector('.sbjkt-button')) { return; } //Already added.
+    likeButtons.forEach(bookmarkButton => {
+        if (bookmarkButton?.parentElement === null) { return; }
+        if (bookmarkButton.parentElement.querySelector('.sbjkt-button')) { return; } //Already added.
 
         // Generate button.
         const purpleButton = document.createElement('button');
@@ -20,11 +20,11 @@ function addSbjktButton() {
         purpleButton.style.display = "flex";
         purpleButton.style.background = "none";
         purpleButton.style.border = "none";
-        purpleButton.style.marginLeft = "12px";
+        purpleButton.style.marginRight = "18px";
         purpleButton.style.cursor = "pointer";
         purpleButton.style.padding = "0";
         purpleButton.style.width = "16px";
-        purpleButton.style.height = "16px";
+        purpleButton.style.height = "20px";
         purpleButton.innerHTML = sbjktIcon;
 
         // On Click.
@@ -33,7 +33,7 @@ function addSbjktButton() {
         });
 
         // Insert.
-        likeButton?.parentElement.appendChild(purpleButton);
+        bookmarkButton?.parentElement.insertBefore(purpleButton, bookmarkButton);
     });
 }
 
