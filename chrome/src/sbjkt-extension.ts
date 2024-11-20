@@ -7,7 +7,7 @@ const sbjktIcon = `
 </svg>
 `;
 
-function addPurpleSquareButton() {
+function addSbjktButton() {
     const likeButtons = document.querySelectorAll('[data-testid="like"], [data-testid="unlike"]');
 
     likeButtons.forEach(likeButton => {
@@ -38,6 +38,6 @@ function addPurpleSquareButton() {
 }
 
 // Observer
-const observer = new MutationObserver(addPurpleSquareButton);
+const observer = new MutationObserver(addSbjktButton);
 observer.observe(document.body, { childList: true, subtree: true });
-addPurpleSquareButton();
+addSbjktButton();
