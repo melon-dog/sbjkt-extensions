@@ -4,7 +4,7 @@
   "main": "dist/sbjkt-extension.js",
   "types": "dist/sbjkt-extension.d.ts",
   "scripts": {
-    "build": "tsc"
+    "build": "bun run build.js"
   },
   "keywords": [
     "sbjkt",
@@ -19,6 +19,7 @@
     "src"
   ],
   "devDependencies": {
+    "esbuild": "^0.24.0",
     "ts-node": "^10.9.2",
     "typescript": "^5.6.3",
     "vitest": "^2.1.5"
@@ -28,5 +29,8 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/melon-dog/sbjkt-extensions"
+  },
+  "dependencies": {
+    "rate-keeper": "^1.1.4"
   }
 }
