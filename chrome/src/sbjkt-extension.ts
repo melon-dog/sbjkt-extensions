@@ -62,15 +62,7 @@ function addSbjktButton() {
                     if (!xUserCache.has(xUser)) {
                         xUserCache.set(xUser, addresses);
                     }
-
-                    if (addresses.length != 0) {
-                        purpleButton.style.display = "flex";
-
-                        // On Click.
-                        purpleButton.addEventListener('click', () => {
-                            window.open(`https://objkt.com/users/${addresses[0]}`); //JUST TESTING! We should go to sbjkt.
-                        });
-                    }
+                    activeSbjktButton(purpleButton, addresses);
                 });
         }
     });
